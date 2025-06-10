@@ -1,0 +1,128 @@
+06.09 17:29
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Videos - Kay Hai Mahual</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0e0e2f; color: #fff; font-family: sans-serif; }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #1a1a3d; padding: 10px 20px; position: sticky; top: 0;
+      z-index: 1000; box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    header img.logo { height: 45px; border-radius: 8px; }
+    header h1 { font-size: 1.4rem; color: #ffcc00; }
+    nav a {
+      color: #ddd; text-decoration: none; margin-left: 15px;
+      font-weight: bold; transition: color 0.3s;
+    }
+    nav a:hover { color: #ffcc00; }
+
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #1e1e3f;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(255, 204, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .video-card .info {
+      padding: 10px 15px;
+    }
+
+    .video-card h3 {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      color: #ffcc00;
+    }
+
+    .video-card p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 1.1rem; }
+      nav a { margin-left: 10px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.ibb.co/HTdMLhF/logo.png" alt="Logo" class="logo">
+  <h1>Kay Hai Mahual - Videos</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="video.html">Videos</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container" id="videoContainer"></div>
+
+<script>
+  const videos = [
+    { id:"rZpuPfN8SxI", title:"Video Title 1", desc:"यह वीडियो हैडलाइन 1 का डिस्क्रिप्शन।" },
+    { id:"xBhcTN5ZhQU", title:"Video Title 2", desc:"यह वीडियो हैडलाइन 2 का डिस्क्रिप्शन।" },
+    { id:"HDAP79LzaA0", title:"Video Title 3", desc:"यह वीडियो हैडलाइन 3 का डिस्क्रिप्शन।" },
+    { id:"4ZwSeCiuRp4", title:"Video Title 4", desc:"यह वीडियो हैडलाइन 4 का डिस्क्रिप्शन।" },
+    { id:"ZI7iD4ZMZ8k", title:"Video Title 5", desc:"यह वीडियो हैडलाइन 5 का डिस्क्रिप्शन।" },
+    { id:"2o8_4b-TfdI", title:"Video Title 6", desc:"यह वीडियो हैडलाइन 6 का डिस्क्रिप्शन।" },
+    { id:"NANQlRfpPXk", title:"Video Title 7", desc:"यह वीडियो हैडलाइन 7 का डिस्क्रिप्शन।" },
+    { id:"ioiCqBRa1U4", title:"Video Title 8", desc:"यह वीडियो हैडलाइन 8 का डिस्क्रिप्शन।" },
+    { id:"Dlnz31nYsJ0", title:"Video Title 9", desc:"यह वीडियो हैडलाइन 9 का डिस्क्रिप्शन।" },
+    { id:"C2b8r8zXFyA", title:"Video Title 10", desc:"यह वीडियो हैडलाइन 10 का डिस्क्रिप्शन।" },
+    { id:"Hon6-xqrnMQ", title:"Video Title 11", desc:"यह वीडियो हैडलाइन 11 का डिस्क्रिप्शन।" },
+    { id:"dwDNASeOgUU", title:"Video Title 12", desc:"यह वीडियो हैडलाइन 12 का डिस्क्रिप्शन।" },
+    { id:"kvyMSZnQjYA", title:"Video Title 13", desc:"यह वीडियो हैडलाइन 13 का डिस्क्रिप्शन।" },
+    { id:"9l_iq-BK4ts", title:"Video Title 14", desc:"यह वीडियो हैडलाइन 14 का डिस्क्रिप्शन।" },
+    { id:"4K9U-tLQVY8", title:"Video Title 15", desc:"यह वीडियो हैडलाइन 15 का डिस्क्रिप्शन।" },
+    { id:"xQp94YxZ0-8", title:"Video Title 16", desc:"यह वीडियो हैडलाइन 16 का डिस्क्रिप्शन।" },
+    { id:"gekOWpWhuKk", title:"Video Title 17", desc:"यह वीडियो हैडलाइन 17 का डिस्क्रिप्शन।" },
+    { id:"6x9EU55SDXM", title:"Video Title 18", desc:"यह वीडियो हैडलाइन 18 का डिस्क्रिप्शन।" },
+    { id:"T-J06tDuoNU", title:"Video Title 19", desc:"यह वीडियो हैडलाइन 19 का डिस्क्रिप्शन।" },
+    { id:"5pqY1cIMlfk", title:"Video Title 20", desc:"यह वीडियो हैडलाइन 20 का डिस्क्रिप्शन।" },
+    { id:"S1CEdI5QVt0", title:"Video Title 21", desc:"यह वीडियो हैडलाइन 21 का डिस्क्रिप्शन।" },
+    { id:"EaVoN5cjiQg", title:"Video Title 22", desc:"यह वीडियो हैडलाइन 22 का डिस्क्रिप्शन।" },
+  ];
+
+  const container = document.getElementById('videoContainer');
+  videos.forEach(v => {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.innerHTML = `
+      <a href="https://youtu.be/${v.id}" target="_blank">
+        <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}">
+      </a>
+      <div class="info">
+        <h3>${v.title}</h3>
+        <p>${v.desc}</p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>

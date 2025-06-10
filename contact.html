@@ -1,0 +1,177 @@
+06.09 17:57
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Kay Hai Mahual by Prabhat</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background animation */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #ffffff20 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: move 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes move {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100px 100px;
+      }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #00000066;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000088;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background: #ffdd57;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #ffc107;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        margin: 8px;
+        font-size: 14px;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kay Hai Mahual by Prabhat</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="video.html">Video</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+
+    <div class="info">
+      <p><strong>Mobile:</strong> +91 92415 45823</p>
+      <p><strong>Address:</strong> Orhanpur, Nawada, Bihar</p>
+<center><p>Kay Hai Mahual by Prabhat</p><center>
+    </div>
+  </div>
+
+</body>
+</html>

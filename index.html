@@ -1,0 +1,155 @@
+06.09 17:23
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kay Hai Mahual by Prabhat - Home</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body, html { height: 100%; font-family: sans-serif; background: #0e0e2f; color: #f0f0f0; overflow-x: hidden; }
+
+  .background { position: fixed; top: 0; left: 0; width:100%; height:100%; z-index:-1; overflow:hidden; }
+  .bubble { position:absolute; border-radius:50%; background:rgba(255,255,255,0.15); animation:rise linear infinite; }
+  @keyframes rise { 0%{transform:translateY(100vh) scale(0.5);opacity:0;}
+                   50%{opacity:0.6;}
+                   100%{transform:translateY(-20vh) scale(1);opacity:0;} }
+
+  header { display:flex; align-items:center; gap:15px; padding:10px 20px; position:sticky; top:0; background:rgba(15,15,35,0.85); backdrop-filter:blur(10px); box-shadow:0 2px 6px rgba(0,0,0,0.5); z-index:10; }
+  header img.logo { height:50px; border-radius:8px; }
+  header h1 { flex-grow:1; font-size:1.6rem; font-weight:700; color:#ffcc00; }
+  nav a { color:#eee; text-decoration:none; margin-left:20px; font-weight:600; transition:color 0.3s; }
+  nav a:hover { color:#ffcc00; }
+
+  .marquee-container { margin:30px auto; width:95%; background:rgba(255,255,255,0.05); border-radius:12px; padding:15px; overflow:hidden; box-shadow:0 0 15px rgba(255,204,0,0.3); }
+  .marquee-track { display:flex; animation:marquee 60s linear infinite; }
+  @keyframes marquee { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+
+  .video-item { flex:0 0 auto; width:140px; margin-right:20px; text-align:center; color:#fff; }
+  .video-item img { width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(255,204,0,0.7); cursor:pointer; }
+  .video-item p { margin:8px 0 0; font-size:0.85rem; }
+
+  .news-section {
+    width: 95%; margin: 40px auto; padding: 20px;
+    background: rgba(255,255,255,0.05); border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+  }
+  .news-section h2 { color: #ffcc00; margin-bottom: 15px; font-size: 1.5rem; }
+  .news-section p { font-size: 1rem; line-height: 1.6; }
+
+  footer {
+    background: rgba(15,15,35,0.85);
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+  footer a { color: #ffcc00; text-decoration: none; margin: 0 8px; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width:600px) {
+    header h1 { font-size:1.2rem; }
+    nav a { margin-left:10px; font-size:0.9rem; }
+    .video-item { width:100px; margin-right:10px; }
+    .video-item p { font-size:0.7rem; }
+    .news-section p { font-size: 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="background" id="background"></div>
+
+<header>
+  <img src="https://i.ibb.co/HTdMLhF/logo.png" alt="Logo" class="logo" />
+  <h1>Kay Hai Mahual by Prabhat</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="video.html">Videos</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="marquee-container">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<div class="news-section">
+  <h2>हमारे न्यूज़ चैनल के बारे में</h2>
+  <p>
+    <strong>Kay Hai Mahual</strong> एक डिजिटल न्यूज और एंटरटेनमेंट प्लेटफॉर्म है जो देश-दुनिया की ताज़ा खबरें, वायरल वीडियो और रोचक घटनाओं को आपके सामने लाता है। 
+    यहाँ आपको मिलेगा मनोरंजन और जानकारी का जबरदस्त मेल, ताकि आपका हर दिन बने मज़ेदार और जागरूकता से भरपूर।
+  </p>
+  <p>
+    हमारा मकसद है आपको बिना किसी भेदभाव और झूठ के, सच्ची खबरों से जोड़े रखना और हर माहौल की सही तस्वीर दिखाना।
+    आप हमारे यूट्यूब चैनल <strong>Kay Hai Mahual</strong> पर जाकर वीडियो भी देख सकते हैं।
+  </p>
+</div>
+
+<footer>
+  &copy; 2025 Kay Hai Mahual by Prabhat. All rights reserved. |
+  <a href="index.html">Home</a>
+  <a href="video.html">Videos</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+  const bg = document.getElementById('background');
+  for(let i=0;i<30;i++){
+    const b=document.createElement('div');
+    b.className='bubble';
+    const size=(Math.random()*40+10)+'px';
+    b.style.width=size; b.style.height=size;
+    b.style.left=(Math.random()*100)+'vw';
+    b.style.animationDelay=(Math.random()*20)+'s';
+    b.style.animationDuration=(10+Math.random()*20)+'s';
+    bg.appendChild(b);
+  }
+
+  const videos = [
+    { id:"rZpuPfN8SxI", title:"Video Title 1", desc:"यह वीडियो हैडलाइन 1 का डिस्क्रिप्शन।" },
+    { id:"xBhcTN5ZhQU", title:"Video Title 2", desc:"यह वीडियो हैडलाइन 2 का डिस्क्रिप्शन।" },
+    { id:"HDAP79LzaA0", title:"Video Title 3", desc:"यह वीडियो हैडलाइन 3 का डिस्क्रिप्शन।" },
+    { id:"4ZwSeCiuRp4", title:"Video Title 4", desc:"यह वीडियो हैडलाइन 4 का डिस्क्रिप्शन।" },
+    { id:"ZI7iD4ZMZ8k", title:"Video Title 5", desc:"यह वीडियो हैडलाइन 5 का डिस्क्रिप्शन।" },
+    { id:"2o8_4b-TfdI", title:"Video Title 6", desc:"यह वीडियो हैडलाइन 6 का डिस्क्रिप्शन।" },
+    { id:"NANQlRfpPXk", title:"Video Title 7", desc:"यह वीडियो हैडलाइन 7 का डिस्क्रिप्शन।" },
+    { id:"ioiCqBRa1U4", title:"Video Title 8", desc:"यह वीडियो हैडलाइन 8 का डिस्क्रिप्शन।" },
+    { id:"Dlnz31nYsJ0", title:"Video Title 9", desc:"यह वीडियो हैडलाइन 9 का डिस्क्रिप्शन।" },
+    { id:"C2b8r8zXFyA", title:"Video Title 10", desc:"यह वीडियो हैडलाइन 10 का डिस्क्रिप्शन।" },
+    { id:"Hon6-xqrnMQ", title:"Video Title 11", desc:"यह वीडियो हैडलाइन 11 का डिस्क्रिप्शन।" },
+    { id:"dwDNASeOgUU", title:"Video Title 12", desc:"यह वीडियो हैडलाइन 12 का डिस्क्रिप्शन।" },
+    { id:"kvyMSZnQjYA", title:"Video Title 13", desc:"यह वीडियो हैडलाइन 13 का डिस्क्रिप्शन।" },
+    { id:"9l_iq-BK4ts", title:"Video Title 14", desc:"यह वीडियो हैडलाइन 14 का डिस्क्रिप्शन।" },
+    { id:"4K9U-tLQVY8", title:"Video Title 15", desc:"यह वीडियो हैडलाइन 15 का डिस्क्रिप्शन।" },
+    { id:"xQp94YxZ0-8", title:"Video Title 16", desc:"यह वीडियो हैडलाइन 16 का डिस्क्रिप्शन।" },
+    { id:"gekOWpWhuKk", title:"Video Title 17", desc:"यह वीडियो हैडलाइन 17 का डिस्क्रिप्शन।" },
+    { id:"6x9EU55SDXM", title:"Video Title 18", desc:"यह वीडियो हैडलाइन 18 का डिस्क्रिप्शन।" },
+    { id:"T-J06tDuoNU", title:"Video Title 19", desc:"यह वीडियो हैडलाइन 19 का डिस्क्रिप्शन।" },
+    { id:"5pqY1cIMlfk", title:"Video Title 20", desc:"यह वीडियो हैडलाइन 20 का डिस्क्रिप्शन।" },
+    { id:"S1CEdI5QVt0", title:"Video Title 21", desc:"यह वीडियो हैडलाइन 21 का डिस्क्रिप्शन।" },
+    { id:"EaVoN5cjiQg", title:"Video Title 22", desc:"यह वीडियो हैडलाइन 22 का डिस्क्रिप्शन।" },
+  ];
+
+  const track=document.getElementById('marqueeTrack');
+  videos.concat(videos).forEach(v=>{
+    const div=document.createElement('div');
+    div.className='video-item';
+    div.innerHTML = `
+      <a href="https://youtu.be/${v.id}" target="_blank">
+        <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}">
+      </a>
+      <p><strong>${v.title}</strong></p>
+      <p>${v.desc}</p>
+    `;
+    track.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
+
