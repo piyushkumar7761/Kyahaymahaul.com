@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://piyushkumar7761.github.io/Kyahaymahaul.com/sitemap.xml
