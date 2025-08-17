@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
   <url>
     <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/</loc>
+    <lastmod>2025-08-17</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- Index -->
   <url>
     <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/index.html</loc>
+    <lastmod>2025-08-17</lastmod>
     <priority>0.9</priority>
   </url>
+
+  <!-- About -->
   <url>
-    <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/admin.html</loc>
-    <priority>0.9</priority>
+    <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/about.html</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Video -->
+  <url>
+    <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/video.html</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Short -->
+  <url>
+    <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/short.html</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Content -->
+  <url>
+    <loc>https://piyushkumar7761.github.io/Kyahaymahaul.com/content.html</loc>
+    <lastmod>2025-08-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
